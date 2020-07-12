@@ -46,10 +46,11 @@ class Blockchain(object):
         return self.chain[-1]
 
 blockchain = Blockchain()
-# print(blockchain.last_bock["proof"])
 blockchain.new_pass("myPassword")
 blockchain.new_pass("myNewPassword")
 blockchain.mine_block()
 for passwords in blockchain.last_bock["passwords"]:
     print(passwords.get("password"))
-# print(blockchain.hash(blockchain.last_bock))
+print(len(blockchain.chain))
+print(blockchain.last_bock["proof"])
+print(blockchain.hash(blockchain.last_bock))
