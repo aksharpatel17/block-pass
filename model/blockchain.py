@@ -1,3 +1,5 @@
+# Example implementation of a blockchain in python
+
 class Blockchain(object):
     def __init__(self):
         self.chain = []
