@@ -27,7 +27,6 @@ class Blockchain(object):
         })
         return self.last_bock["index"] + 1
 
-
     def get_proof(self, block):
         while self.validate_proof(block) is False:
             block["proof"] += 1
@@ -49,8 +48,8 @@ blockchain = Blockchain()
 blockchain.new_pass("myPassword")
 blockchain.new_pass("myNewPassword")
 blockchain.mine_block()
-for passwords in blockchain.last_bock["passwords"]:
-    print(passwords.get("password"))
-print(len(blockchain.chain))
+# for passwords in blockchain.last_bock["passwords"]:
+#     print(passwords.get("password"))
+# print(len(blockchain.chain))
 print(blockchain.last_bock["proof"])
 print(blockchain.hash(blockchain.last_bock))
